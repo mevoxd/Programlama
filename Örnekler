@@ -1,0 +1,102 @@
+2 sayı ortalaması: 
+#include <stdio.h>
+
+
+int main ()
+{
+
+    int a,b;
+    float ort;
+
+    printf("Lutfen 2 Rakam Giriniz\n");
+    scanf("%d %d",&a,&b);
+
+    ort=(float) (a+b) / 2 ;
+
+    printf("iki sayinin ortalamasi %.2f\n",ort);
+    scanf("%d",&ort);
+    return 0;
+}
+
+
+
+4 değer
+#include <stdio.h>
+int sonuc(int a,int b){
+    char x;
+    x=(a+b)*(float)y /(char)k ;
+    return (x);
+    }
+
+int main ()
+{
+
+    int a,b;
+    float y;
+    char k;
+    
+
+    printf("Lutfen 2 Rakam Giriniz\n");
+    scanf("%d %d",&a,&b);
+    printf("Lutfen float deger Giriniz\n");
+    scanf("%f %f",&y);
+    printf("\n",sonuc);
+    scanf("%d",&sonuc);
+    getchar();
+    return 0;
+
+
+çift sayilari topla
+  int a=1 ;
+  int sonuc=0;
+
+
+     while(a<=100){
+            if(a%2==0){
+                sonuc=sonuc+a;
+                }
+                
+            ++a;
+            
+        }
+             printf("%d",sonuc);
+
+ 
+  getchar();	
+  return 0;
+tutulan sayıyı tahmin 
+	    int tut;
+            int gir;
+            int sayac=1;
+            
+            srand(time(NULL));
+            tut=rand()%20+1;
+            printf("sayigir");
+            scanf("%d",&gir);
+            while(tut!=gir){
+                    if(gir>tut){
+                            printf("sayiyi azalt");
+                            scanf("%d",&gir);
+                        }
+                    else{
+                        printf("sayiyi artır");
+                            scanf("%d",&gir);
+                    }
+                    sayac=sayac+1;
+                }
+                printf("dogru %d",sayac);
+                getchar();
+üçgen yıldız yazdırma
+
+int i,j,k;
+  for(i=1;i<=5;i++){
+        for(k=1;k<=5-i;k++){
+            printf(" ");
+        }
+        for(j=0;j<2*i-1;j++){
+            
+        printf("*");
+        }
+            printf("\n");
+    }
+
