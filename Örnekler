@@ -113,3 +113,14 @@ int sayac=0;
         sayac++;
         printf("%d .basamak %d \n",sayac,a);
         }
+	
+2 boyutlu diziye atama yapma
+int i,j,a[10][3];
+  for(i=0;i<10;i++){
+        for(j=0;j<3;j++){
+            a[i][j]=i+j;
+            printf("%d  ",a[i][j]);
+            }
+            printf("\n");
+            
+        }
