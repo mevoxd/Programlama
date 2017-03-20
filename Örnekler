@@ -47,6 +47,7 @@ int main ()
 
 
 çift sayilari topla
+
   int a=1 ;
   int sonuc=0;
 
@@ -64,7 +65,9 @@ int main ()
  
   getchar();	
   return 0;
+  
 tutulan sayıyı tahmin 
+
 	    int tut;
             int gir;
             int sayac=1;
@@ -86,6 +89,7 @@ tutulan sayıyı tahmin
                 }
                 printf("dogru %d",sayac);
                 getchar();
+		
 üçgen yıldız yazdırma
 
 int i,j,k;
@@ -115,6 +119,7 @@ int sayac=0;
         }
 	
 2 boyutlu diziye atama yapma
+
 int i,j,a[10][3];
   for(i=0;i<10;i++){
         for(j=0;j<3;j++){
@@ -127,6 +132,7 @@ int i,j,a[10][3];
 	
 	
 Asal sayı bulma kodu
+
 int i,sayi,sayac=0;
 printf("Sayiyi girin : ");
 scanf("%d",&sayi);
@@ -145,3 +151,13 @@ if(sayac==0)
     {
         printf("Asal degil"); 
     }
+Carpim Tablosu
+
+  int i,j;
+    for(i=1;i<11;i++){
+        printf("\n");
+        for(j=1;j<11;j++){
+                printf("%4d",j*i);
+            }
+        
+        }
