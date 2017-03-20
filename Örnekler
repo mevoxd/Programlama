@@ -161,3 +161,17 @@ Carpim Tablosu
             }
         
         }
+
+Dizilerde Siralama
+
+int i,j,ara,a[5];
+    for(i=0;i<4;i++){
+        for(j=0;j<=4-i;j++){
+            if(a[i]>a[i+1]){
+                ara=a[i];
+                a[i]=a[i+1];
+                a[i+1]=ara;
+                }
+            }
+        }
+    
