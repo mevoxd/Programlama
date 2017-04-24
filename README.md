@@ -1,4 +1,4 @@
 # Programlama
 AİBÜ BÖTE Programlamaya Giriş Dersi (C Prog.Dili)
 Dersle Alakalı örnekler ve sınav öncesi hazırlık için kodlar
-https://github.com/mevoxd/Programlamamevoxd/Programlama
+https://github.com/mevoxd/Programlama
