@@ -1,1 +1,6 @@
-2 sıralı dizi var bu dizileri yeni bir dizide sıralama fonksiyonla yapılacak.Öz yinelemeli fonksiyonlar
+2 sıralı dizi var bu dizileri yeni bir dizide sıralama fonksiyonla yapılacak.Öz yinelemeli fonksiyonlar ile yap.
+.....................................................................................
+sırala(a'nın ilk yarısı);
+sırala(a'nın ikinci yarısı);                                                          merge sort
+birleştir(A'nın ilk ile a'nın ikinci yarısı);
+.....................................................................................
