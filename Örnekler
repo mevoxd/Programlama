@@ -198,3 +198,60 @@ int a[5][5]={{1,3,5,6,7},{9,8,7,5,4},{5,4,7,9,2},{5,1,9,4,6},{1,9,0,3,7}};
                 }
                 printf("%\n");
             }
+	Dizilerde sıralı 2 diziyi birleştirme
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+ 
+#define dizi    10
+ 
+int main()
+{
+    int a[dizi];
+    int b[dizi];
+    int c[dizi + dizi];
+    int k;
+    int index1 = 0, index2 = 0;
+ 
+    srand(time(0));
+    /* sıralı rastgele diziler olusturuluyor  */
+    a[0] = rand() % 10;
+    b[0] = rand() % 10;
+ 
+    for (k = 1; k < dizi; ++k) {
+        a[k] = rand() % 10 + a[k - 1];
+        b[k] = rand() % 10 + b[k - 1];
+    }
+    /* sıralı rastgele diziler birlestiriliyor  */
+ 
+    for (k = 0; k < dizi + dizi; ++k)
+        if (index1 == dizi)
+            c[k] = b[index2++];
+        else if (index2 == dizi)
+            c[k] = a[index1++];
+        else {
+            if (a[index1] < b[index2])
+                c[k] = a[index1++];
+            else
+                c[k] = b[index2++];
+        }   
+ 
+ 
+    /* birinci sıralı dizi yazdırılıyor */
+    for (k = 0; k < dizi; ++k) 
+        printf("%d ", a[k]);
+    printf("\n**************************************************\n");
+ 
+    /* ikinci sıralı dizi yazdırılıyor */
+    for (k = 0; k < dizi; ++k) 
+        printf("%d ", b[k]);
+    printf("\n**************************************************\n");
+ 
+    /* birlestirilmis dizi yazdırılıyor */
+    for (k = 0; k < dizi + dizi; ++k)   
+        printf("%d ", c[k]);
+    printf("\n**************************************************\n");
+    getchar();
+    return 0;
+}
