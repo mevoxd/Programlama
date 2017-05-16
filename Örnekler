@@ -293,52 +293,55 @@ int main()
 matris hesaplama:
 #include <stdio.h>
 #include <stdlib.h>
-
-int main(int argc, char *argv[])
-{
-int matris1X=0, matris1Y=0, matris2X=0, matris2Y=0;
-
-printf(“Ilk matrisin boyutlarini giriniz?(Örn: 3 4) :”);
-scanf(“%d%d”,&matris1X,&matris1Y);
-printf(“Ikinci matrisin boyutlarini giriniz?(Örn: 4 5) :”);
-scanf(“%d %d”,&matris2X,&matris2Y);
-
-if(matris1Y != matris2X) printf(“Matris carpimi icin boyutlar uygun degil.\n”);
-else if(matris1X<2 || matris1Y<2 || matris2X<2 || matris2Y<2) printf(“Boyutlar 2’den kucuk olamaz.\n”);
-else{
-int matris1[matris1X][matris1Y], matris2[matris2X][matris2Y], carpimMatrisi[matris1X][matris2Y];
-int i,j,k,topla;
-//Matris1 değerlerinin alınması.
-for(i=0;i<matris1X;i++)
-{
-for(j=0;j<matris1Y;j++){
-printf(“Matris1[%d][%d]:”,i+1,j+1);
-scanf(“%d”,&matris1[i][j]);
-}
-}
-//Matris2 değerlerinin alınması.
-for(i=0;i<matris2X;i++)
-{
-for(j=0;j<matris2Y;j++){
-printf(“Matris2[%d][%d]:”,i+1,j+1);
-scanf(“%d”,&matris2[i][j]);
-}
-}
-system(“CLS”);
-//Matris çarpımı
-for(i=0;i<matris1X;i++)
-{
-for(j=0;j<matris2Y;j++)
-{
-topla=0;
-for(k=0;k<matris1Y;k++) topla = topla + matris1[i][k]*matris2[k][j];
-carpimMatrisi[i][j]=topla;
-printf(“Carpim Matrisi[%d][%d] = %d “,i+1,j+1,carpimMatrisi[i][j]);
-}
-printf(“\n”);
-}
-}
-
-system(“PAUSE”);
-return 0;
+#include <time.h>
+ 
+int main(){
+	int x,y,z;
+	printf("satır sayısını girin : ");
+	scanf("%d",&x);
+	printf("sutun sayisini girin : ");
+	scanf("%d",&y);
+    srand(time(NULL));  // Bu  yazılmalı yoksa sürekli aynı değerleri atar
+    int dizi1[x][y], dizi2[x][y];
+    int topla, cikar, carp = 0;
+    
+    //-3 3 aralığında random sayılar diziye atılıyor (-3 3 dahil olması için rand() % 6 - 3 yazılmalı)
+    int i,j,k;
+    for(i=0; i<x; i++)
+        for(j=0; j<y; j++){
+            dizi1[i][j] = rand() % 10; 
+            dizi2[i][j] = rand() % 10; 
+            
+        }
+ 
+    printf("Dizi1\n");    
+    for(i=0; i<x; i++){
+        for(j=0; j<y; j++){
+            printf("%3d ", dizi1[i][j]);  // Ekranda düzgün gözüksün diye 3 karakter olarak yazdırıldı (sayı 1 basamaklı ise önüne 2 boşluk koyar)
+        }
+        printf("\n");
+    }
+    printf("\nDizi2\n");
+    for(i=0; i<x; i++){
+        for(j=0; j<y; j++){
+            printf("%3d ", dizi2[i][j]);
+        }
+        printf("\n");
+    }
+    
+    printf("\nCarpma islemi\n");
+    for(i=0; i<x; i++){
+        for(j=0; j<y; j++){
+            for(k=0; k<y; k++)
+                carp += dizi1[i][k] * dizi2[k][j];
+                
+            printf("%3d ", carp);
+            carp = 0;
+        }
+        printf("\n");
+    }
+        
+    printf("\n");
+    system("pause");
+    return 0;
 }
