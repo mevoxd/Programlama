@@ -25,3 +25,4 @@ int f(int n){
 else 
 return n*f(n-1);
 }
+https://ckaynak.com/3x3-matriste-33-araliginda-random-deger-atama-ve-bu-matrislerde-toplama-cikarma-ve-carpma-islemi-yapma-775
